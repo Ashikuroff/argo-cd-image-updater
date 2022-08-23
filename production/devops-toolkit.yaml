@@ -5,16 +5,12 @@ metadata:
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  annotations:
-    argocd-image-updater.argoproj.io/image-list: ashik9001/devops-toolkit:~1
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
-    argocd-image-updater.argoproj.io/git-branch: main  
 spec:
   project: production
   source:
     repoURL: https://github.com/Ashikuroff/argo-cd-image-updater
     targetRevision: HEAD
-    path: production
+    path: kustomize/overlays/production
   destination:
     server: https://kubernetes.default.svc
     namespace: production
