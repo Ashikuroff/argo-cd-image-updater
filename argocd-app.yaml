@@ -31,7 +31,7 @@ metadata:
 spec:
   project: production
   source:
-    repoURL: https://github.com/vfarcic/argo-cd-image-updater
+    repoURL: https://github.com/Ashikuroff/argo-cd-image-updater
     targetRevision: HEAD
     path: production
   destination:
